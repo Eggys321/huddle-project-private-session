@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-open-sans: "Open Sans", sans-serif;
+}
+html {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+body {
+  background-image: url("assets/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--violet);
+  font-family: var(--ff-open-sans);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+/* header */
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+header img {
+  width: 41%;
+}
+
+/* main */
+.main {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  min-height: 35rem;
+}
+.main img {
+  max-width: 94%;
+}
+
+.main-inner-text h2 {
+  font-weight: 600;
+  color: white;
+  font-family: var(--ff-poppins);
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.main-inner-text p {
+  color: rgb(247, 246, 246);
+  width: 80%;
+  margin: auto;
+  line-height: 1.6rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.main-inner-text-btn-div {
+  display: flex;
+  justify-content: center;
+}
+/* box shadow,the first value signifies the horizontal position,so a negative digit moves the shadow from right hand side to the left hand side,
+while a positive digit moves the shadow from the left hand side to the right hand side... please note that the default color of the shadow is the current text-color */
+
+/* box shadow, the second value signifies the vertical position,so a negative digit moves the shadow from the top to the bottom */
+
+/* box shadow, the third value is for the blur effect, the higher the digit, the more blurred the shadow will be */
+.main-inner-text button {
+  width: 70%;
+  height: 3rem;
+  border-radius: 2rem;
+  border: none;
+  color: var(--violet);
+  box-shadow: -1px 2px 5px rgb(70, 68, 68);
+}
+
+/* footer */
+footer {
+  padding: 1rem 0;
+}
+
+.footer {
+  margin: 2rem 0;
+}
+.footer-div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-icon {
+  border: 1px solid rgb(244, 241, 241);
+  padding: 0.5rem;
+  border-radius: 100%;
+  font-size: 16px;
+  color: rgb(241, 239, 239);
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("assets/bg-desktop.svg");
+  }
+  /* header */
+  header {
+    padding-bottom: 0;
+  }
+  header img {
+    width: 16%;
+  }
+  /* main */
+  .main {
+    padding-top: 4rem;
+    flex-direction: row;
+    min-height: 20rem;
+  }
+  .main-inner-img {
+    max-width: 55%;
+  }
+
+  .main-inner-img > img {
+    max-width: 100%;
+  }
+
+  .main-inner-text {
+    max-width: 42%;
+    padding-top: 3rem;
+    /* text-align: start; */
+  }
+  .main-inner-text h2 {
+    width: 68%;
+    margin: 0;
+    font-size: 2rem;
+    text-align: start;
+    line-height: 3rem;
+  }
+  .main-inner-text p {
+    width: 88%;
+    margin: 0;
+    text-align: start;
+    line-height: 1.8rem;
+  }
+  .main-inner-text-btn-div {
+    justify-content: start;
+    width: 40%;
+  }
+  .main-inner-text-btn-div button:hover {
+    background-color: var(--soft-magenta);
+    color: rgb(234, 231, 231);
+    cursor: pointer;
+  }
+
+  /* footer */
+  footer {
+    padding: 0;
+  }
+  .footer {
+    margin: 0;
+  }
+
+  .footer-div {
+    justify-content: end;
+  }
+
+  .footer-icon {
+    font-size: 20px;
+  }
+}
